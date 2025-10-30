@@ -70,15 +70,9 @@ uv run python joint_monkey.py
 cd lib/IsaacGymEnvs/isaacgymenvs
 uv run python train.py task=Cartpole
 
-cd src/MimicKit
-uv run python mimickit/run.py --arg_file args/deepmimic_humanoid_ppo_args.txt --visualize true
-
 cd src/humanoid-gym/humanoid
 uv run python scripts/train.py --task=humanoid_ppo --run_name v1 --headless --num_envs 4096
 uv run python scripts/play.py --task=humanoid_ppo --run_name v1
-
-cd src/unitree_rl_gym
-uv run python legged_gym/scripts/train.py --task=g1
 
 # HumanoidVerse
 cd src/HumanoidVerse
