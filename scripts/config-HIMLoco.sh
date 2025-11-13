@@ -18,7 +18,7 @@ uv pip install -e .
 cd $PROJECT_DIR/src/HIMLoco
 cd rsl_rl && uv pip install -e .
 cd ../legged_gym && uv pip install -e .
-uv pip install numpy==1.21.0 setuptools tensorboard
+uv pip install numpy==1.21.0 setuptools tensorboard==2.12.3
 
 # Install self-built PyTorch
 cd $PROJECT_DIR/lib
