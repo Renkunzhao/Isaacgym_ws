@@ -1,9 +1,9 @@
 FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04
 ENV DEBIAN_FRONTEND=noninteractive 
 
-RUN sed -i 's|http://.*archive.ubuntu.com|http://mirror.mit.edu/ubuntu/|g' /etc/apt/sources.list && \
-    sed -i 's|http://.*security.ubuntu.com|http://mirror.mit.edu/ubuntu/|g' /etc/apt/sources.list && \
-    apt clean
+# RUN sed -i 's|http://.*archive.ubuntu.com|http://mirror.mit.edu/ubuntu/|g' /etc/apt/sources.list && \
+#     sed -i 's|http://.*security.ubuntu.com|http://mirror.mit.edu/ubuntu/|g' /etc/apt/sources.list && \
+#     apt clean
 
 # dependencies for gym
 #
@@ -24,7 +24,7 @@ RUN apt-get update \
  libegl1 \
  git-lfs
 
-RUN apt upgrade libcudnn9-cuda-12 libcudnn9-dev-cuda-12
+RUN apt upgrade -y --allow-change-held-packages libcudnn9-cuda-12 libcudnn9-dev-cuda-12
 
 RUN apt-get install -y wget python3-pip libmkl-intel-lp64 libmkl-gnu-thread libmkl-core libomp5 openmpi-bin && \
     pip install uv && \

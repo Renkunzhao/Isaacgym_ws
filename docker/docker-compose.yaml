@@ -1,3 +1,5 @@
+name: isaacgym_ws
+
 services:
   isaacgym_ws:
     build:
