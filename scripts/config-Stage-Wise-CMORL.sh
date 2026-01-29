@@ -24,7 +24,7 @@ uv pip install -e .
 # Stage-Wise-CMORL
 cd $PROJECT_DIR/src/Stage-Wise-CMORL
 uv pip install -r requirements.txt
-uv pip install setuptools wandb scipy pandas requests numpy==1.20 ruamel.yaml
+uv pip install setuptools wandb==0.24.0 scipy pandas requests numpy==1.20 ruamel.yaml
 
 # Install self-built PyTorch
 cd $PROJECT_DIR/lib
