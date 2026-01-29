@@ -30,6 +30,3 @@ uv pip install setuptools wandb scipy pandas requests numpy==1.20 ruamel.yaml
 cd $PROJECT_DIR/lib
 wget -nc https://github.com/Renkunzhao/Isaacgym/releases/download/torch2.3.1/torch-1.10.0a0+3fd9dcf-cp38-cp38-linux_x86_64.whl
 uv pip install torch-1.10.0a0+3fd9dcf-cp38-cp38-linux_x86_64.whl
-
-# uv run python main_teacher.py --task_cfg_path tasks/go1_twohand.yaml --algo_cfg_path algos/comoppo/go1_twohand.yaml --wandb --seed 1
-# uv run python main_teacher.py --task_cfg_path tasks/go1_twohand.yaml --algo_cfg_path algos/comoppo/go1_twohand.yaml --seed 1 --test --render --seed 1 --model_num 940000000
