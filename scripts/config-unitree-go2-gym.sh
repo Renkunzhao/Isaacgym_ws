@@ -2,7 +2,7 @@
 PROJECT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"/../
 mkdir -p $PROJECT_DIR/src
 
-# HIMLoco
+# My_unitree_go2_gym
 cd $PROJECT_DIR/src
 git clone https://github.com/yusongmin1/My_unitree_go2_gym.git
 cd My_unitree_go2_gym
@@ -15,10 +15,12 @@ source .venv/bin/activate
 cd $PROJECT_DIR/python
 uv pip install -e .
 
+apt-get install -y ninja-build
+
 cd $PROJECT_DIR/src/My_unitree_go2_gym
 cd rsl_rl && uv pip install -e .
 cd .. && uv pip install -e .
-uv pip install numpy==1.21.0 
+uv pip install numpy==1.21.0 mujoco-python-viewer tqdm pygame keyboard pynput
 # setuptools tensorboard==2.12.3
 
 # Install self-built PyTorch
